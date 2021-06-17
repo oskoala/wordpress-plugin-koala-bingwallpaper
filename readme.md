@@ -2,9 +2,9 @@
 
 > 考拉开源必应壁纸项目主页：https://www.oskoala.com/biyingbizhi
 
-项目预览地址：https://www.wuzhixiang.cn/index.php/bing/
+> 项目预览地址：https://www.wuzhixiang.cn/index.php/bing/
 
-github地址：https://github.com/oskoala/wp-bing-wallpaper
+> github地址：https://github.com/oskoala/wp-bing-wallpaper
 
 ## 安装
 第一步：github项目主页下载到插件压缩包。
