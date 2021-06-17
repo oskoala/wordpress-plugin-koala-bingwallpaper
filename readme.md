@@ -32,9 +32,7 @@ powershell Invoke-WebRequest https://www.wuzhixiang.cn/wp-cron.php # 域名换�
 具体请参考：https://blog.csdn.net/xinpo66/article/details/81238982
 ```
 
-
-
-# 插件信息
+## 插件信息
 
 一、图片存储在\wp-content\uploads\bing 按照年份月份划分文件夹。
 
