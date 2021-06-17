@@ -1,0 +1,1 @@
+powershell Invoke-WebRequest http://www.wp.cn/wp-cron.php

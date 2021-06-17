@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    height: 4rem;
+    line-height: 4rem;
+}
+
+header .logo {
+    display: inline-block;
+    height: 100%;
+    font-size: 2.3rem;
+    color: #0C8484;
+    padding-left: 4rem;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 3rem;
+}
+
+.page-link {
+    color: #0C8484
+}
+
+.page-item.active .page-link {
+    background-color: #0C8484;
+    border-color: #0C8484;
+}
+
+.page-link:hover {
+    color: #0C8484;
+}
+
+.koala_bing_img_m_0 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.koala_bing_img_p_0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.koala_bing_img_mb_0 {
+    margin-bottom: 0 !important;
+}
+
+.menu li a {
+    color: #0C8484
+}
+
+.koala_bing_img_item_box {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background: #dedede;
+    display: block;
+    height: 100%;
+}
+
+.koala_bing_img_item_box:hover .koala_bing_img_mark {
+    opacity: 1;
+}
+
+.koala_bing_img_item_box .koala_bing_img_mark {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), color-stop(40%, transparent), color-stop(60%, transparent), color-stop(60%, rgba(0, 0, 0, 0.6)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4) 0, transparent 40%, transparent 60%, rgba(0, 0, 0, 0.6));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, transparent 40%, transparent 60%, rgba(0, 0, 0, 0.6));
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
+    z-index: 1;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.koala_bing_img_item_box:hover .koala_bing_img_desc_box {
+    opacity: 1;
+}
+
+.koala_bing_img_content_box {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+.koala_bing_img_desc_box {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 12px;
+    padding-left: 0.5rem;
+    padding-right: 1.05rem;
+    display: block;
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.koala_bing_img_desc_detail_box {
+    bottom: 0;
+    padding: 1.1rem;
+    display: block;
+    width: 100%;
+    color: #fff;
+    background: rgba(1, 1, 1, 0.5);
+    opacity: 1;
+}
+
+.koala_bing_img_desc_box h3 {
+    font-size: 1rem;
+    letter-spacing: .01rem;
+    font-weight: 400;
+    color: #fff;
+    padding: .02rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.koala_bing_img_item_box:hover img {
+    transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+}
+
+.koala_bing_img_item_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.koala_bing_img_item_box:hover .koala_bing_img_like_box {
+    opacity: 1;
+}
+
+.koala_bing_img_like_box {
+    font-size: 0.8rem;
+    position: absolute;
+    right: .05rem;
+    top: 0.5rem;
+    padding: 0.5rem;
+    display: block;
+    text-align: right;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    opacity: 0;
+    z-index: 3;
+}
+
+.koala_bing_img_like_count:hover {
+    background-color: #fff;
+}
+
+.koala_bing_img_like_count {
+    cursor: pointer;
+    display: inline-block;
+    height: 2.3rem;
+    line-height: 2.3rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid transparent;
+    -webkit-border-radius: 0.6rem;
+    border-radius: 0.6rem;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
+    text-align: center;
+    padding: 0 1.1rem;
+    margin-right: 1.05rem;
+    color: #0C8484;
+}
+
+.koala_bing_img_options_box {
+    font-size: 0.8rem;
+    padding: 1rem;
+    width: 100%;
+    display: block;
+    text-align: right;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.koala_bing_img_options_left:hover {
+    background-color: #fff;
+}
+
+.koala_bing_img_options_left {
+    left: 1.5rem;
+    top: 1rem;
+    position: absolute;
+    display: inline-block;
+    height: 2.3rem;
+    line-height: 2.3rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid transparent;
+    cursor: pointer;
+    -webkit-border-radius: 0.6rem;
+    border-radius: 0.6rem;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
+    text-align: center;
+    padding: 0 1rem;
+    color: #0C8484;
+
+}
+
+.koala_bing_img_options_right_box {
+    right: 1.5rem;
+    top: 1rem;
+    position: absolute;
+    display: flex;
+}
+
+.koala_bing_img_footer_text {
+    width: 100%;
+    text-align: center;
+    color: #0C8484;
+    font-size: 12px;
+}
+
+.koala_bing_img_footer_text a {
+    color: #0C8484;
+}
+
+.koala_bing_img_mr4 {
+    margin-right: 4rem;
+}
+
+.koala_bing_img_zw {
+    height: 50px;
+    display: none;
+}
+
+.koala_bing_img_img_mask_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    -webkit-filter: blur(30px);
+    filter: blur(20px);
+}
+
+@media screen and (max-width: 768px) {
+    header .logo {
+        padding-left: 1rem;
+    }
+
+    .menu {
+        padding-left: 0 !important;
+        justify-content: flex-start !important;
+    }
+
+    .menu li {
+        margin-right: 1rem;
+    }
+
+    .koala_bing_img_zw {
+        display: block;
+    }
+}
+
+.wrapper {
+    max-width: 100% !important;
+}
+
+#masthead {
+    margin-bottom: 0px;
+}
+
+header {
+    height: auto;
+}
+
+
+.posts-nav {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.44);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.posts-nav .page-numbers {
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    line-height: 30px;
+    margin: 0 5px;
+}
+
+.posts-nav .page-numbers.current, .posts-nav .page-numbers:not(.dots):hover {
+    background: #3b5998;
+    border-color: #3b5998;
+    color: #fff;
+}
+
+.posts-nav .page-numbers.dots {
+    border-color: rgba(0, 0, 0, 0)
+}
