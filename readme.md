@@ -19,9 +19,9 @@
 Linux系统
 
 ```shell
-第一步
+一、
 crontab -e # 进入crontab 编辑页面
-第二步 在最下方添加一行
+二、 在最下方添加一行
 * * * * * wget https://www.wuzhixiang.cn/wp-cron.php   #域名换成自己的
 ```
 
