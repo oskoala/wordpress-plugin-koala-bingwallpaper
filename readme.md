@@ -22,7 +22,7 @@ Linux系统
 一、
 crontab -e # 进入crontab 编辑页面
 二、 在最下方添加一行
-* * * * * wget https://www.wuzhixiang.cn/wp-cron.php   #域名换成自己的
+* * * * * wget --output-document=/dev/null https://www.wuzhixiang.cn/wp-cron.php   #域名换成自己的
 ```
 
 Windows系统

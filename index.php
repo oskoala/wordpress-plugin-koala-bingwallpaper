@@ -18,11 +18,11 @@
  * 函数名称： koala_bing_img_{function_name}
  */
 define( 'koala_bing_img_dir', plugin_dir_path( __FILE__ ) );
-
+define( 'DISABLE_WP_CRON', true );
 
 require_once "admin/index.php";
 
-date_default_timezone_set("PRC");
+date_default_timezone_set( "PRC" );
 show_admin_bar( false );
 register_activation_hook( __FILE__, "koala_bing_img_register_activation_hook" );
 register_uninstall_hook( __FILE__, 'koala_bing_img_register_uninstall_hook' );
