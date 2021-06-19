@@ -33,7 +33,7 @@ if ( $action == "view" ) {
 
 	//以只读和二进制模式打开文件
 	$file = fopen( $download_url, "rb" );
-
+	ob_clean();
 	//告诉浏览器这是一个文件流格式的文件
 	Header( "Content-type: application/octet-stream" );
 	//请求范围的度量单位
@@ -46,14 +46,16 @@ if ( $action == "view" ) {
 	//读取文件内容并直接输出到浏览器
 	echo fread( $file, filesize( $download_url ) );
 	fclose( $file );
+
 	return;
 }
 
-get_header();
+include "header.php";
 
-$date       = substr( $item['created_at'], 0, 10 );
-$like_style = $_SESSION[ 'img_like_' . $item['id'] ] ? 'color: #f15656' : '';
-$html       = <<< HTML
+$date        = substr( $item['created_at'], 0, 10 );
+$heart_image = $_SESSION[ 'img_like_' . $id ] ? '/public/images/xin1.png' : '/public/images/xin2.png';
+$plugins_url = plugins_url( '', __FILE__ );
+$html        = <<< HTML
 <div class="koala_bing_img_content_box">
     <div class="koala_bing_img_img_mask_box"
          style="background-image: url('{$item['origin_url']}');filter: blur(0px);">
@@ -63,20 +65,20 @@ $html       = <<< HTML
             {$item['info']}
         </h3>
         <div class="d-flex">
-            <span class="koala_bing_img_mb_0 koala_bing_img_mr4"><i class="icon icon-calendar"></i>{$date}</span>
-            <span class="koala_bing_img_mb_0"><i class="icon icon-eye"> </i>{$item['view']}</span>
+            <span class="koala_bing_img_mb_0 koala_bing_img_mr4 koala_bing_img_qi_box"><img src="{$plugins_url}/public/images/riqi.png"> {$date}</span>
+            <span class="koala_bing_img_mb_0 koala_bing_img_qi_box"><img src="{$plugins_url}/public/images/liulan.png">{$item['view']}</span>
         </div>
     </div>
     <div class="koala_bing_img_options_box">
-        <a onclick="back()" class="koala_bing_img_options_left"><i class="fa fa-chevron-left"></i> BACK</a>
+        <a onclick="back()" class="koala_bing_img_options_left koala_bing_img_left_box"><img src="{$plugins_url}/public/images/back.png"> BACK</a>
         <div class="koala_bing_img_options_right_box">
         
-        <div onclick="image_like({$item['id']})" class="koala_bing_img_like_count">
-            <i class="fa fa-heart" id="like_heart{$item['id']}" style="$like_style"></i>
+        <div onclick="image_like({$item['id']})" class="koala_bing_img_like_count koala_bing_img_count">
+            <img src="{$plugins_url}{$heart_image}" id="like_heart{$id}">
             <span id="like{$item['id']}">{$item['like']}</span>
         </div>
         
-        <a href="{$PLUGIN_ROUTER}?id={$item['id']}&action=download&route=detail" class="koala_bing_img_like_count"><i class="fa fa-cloud-download"></i> {$item['download']}</a>
+        <a href="{$PLUGIN_ROUTER}?id={$item['id']}&action=download&route=detail" class="koala_bing_img_like_count koala_bing_img_count"><img src="{$plugins_url}/public/images/xz.png"> {$item['download']}</a>
         </div>
     </div>
 </div>
@@ -90,5 +92,15 @@ echo $html;
     function back() {
         let cpage = <?php echo $cpage ?>;
         window.location.href = "<?php echo $PLUGIN_ROUTER?>?cpage=" + cpage
+    }
+</script>
+
+<script>
+    function image_like(id) {
+        $.post("/wp-admin/admin-ajax.php?action=koala_bing_img_image_like&id=" + id, function (res) {
+            let likeCount = parseInt($("#like" + id).html()) + res.data.like;
+            $("#like" + id).html(likeCount);
+            $("#like_heart" + id).attr("src", "<?php echo $plugins_url?>/public/images/xin1.png");
+        })
     }
 </script>

@@ -24,6 +24,35 @@ header .logo {
     padding-left: 4rem;
 }
 
+.koala_bing_img_left_box img {
+    margin-top: -2px;
+    margin-right: 0.4rem;
+    width: 0.6rem !important;
+    height: 0.9rem !important;
+}
+
+.koala_bing_img_qi_box {
+    display: flex;
+    align-items: center;
+}
+
+.koala_bing_img_qi_box img {
+    margin-right: 0.4rem;
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+}
+
+.koala_bing_img_count {
+    display: flex;
+    align-items: center;
+}
+
+.koala_bing_img_count img {
+    margin-right: 0.4rem;
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+}
+
 .menu li {
     display: inline-block;
     margin-right: 3rem;
@@ -297,11 +326,6 @@ header .logo {
 #masthead {
     margin-bottom: 0px;
 }
-
-header {
-    height: auto;
-}
-
 
 .posts-nav {
     font-size: 14px;

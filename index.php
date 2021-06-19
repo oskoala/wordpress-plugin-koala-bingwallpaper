@@ -1,24 +1,22 @@
 <?php
 
+const PLUGIN_URL = "https://www.oskoala.com/wordpress-plugin-koala-bingwallpaper";
 
 /**
  * Plugin Name: 必应壁纸
- * Plugin URI: https://www.oskoala.com/biyingbizhi
+ * Plugin URI: https://www.oskoala.com/wordpress-plugin-koala-bingwallpaper
  * Description: WordPress 必应壁纸 插件
  * Version: 1.0.0
  * Author: 考拉开源
  * Author URI: https://www.oskoala.com/
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: wporg
- * Domain Path: /languages
  */
+
 
 /**
  * 函数命名规则
  * 函数名称： koala_bing_img_{function_name}
  */
 define( 'koala_bing_img_dir', plugin_dir_path( __FILE__ ) );
-define( 'DISABLE_WP_CRON', true );
 
 require_once "admin/index.php";
 
@@ -52,26 +50,6 @@ $koala_bing_img_templates_new = [
 ];
 
 
-function koala_bing_img_add_resources() {
-	wp_register_style( 'bootstrap', plugins_url( 'public/css/bootstrap.min.css', __FILE__ ) );
-	wp_enqueue_style( 'bootstrap' );
-	wp_register_style( 'style', plugins_url( 'public/css/style.css', __FILE__ ) );
-	wp_enqueue_style( 'style' );
-	wp_register_style( 'iconfont', plugins_url( 'public/css/iconfont.css', __FILE__ ) );
-	wp_enqueue_style( 'iconfont' );
-
-	wp_register_script( 'bootstrap', plugins_url( 'public/js/bootstrap.bundle.min.js', __FILE__ ) );
-	wp_enqueue_script( 'bootstrap' );
-	wp_register_script( 'jquery2', plugins_url( 'public/js/jquery-1.12.4.min.js', __FILE__ ) );
-	wp_enqueue_script( 'jquery2' );
-
-	wp_register_script( 'disable', plugins_url( 'public/js/disable.js', __FILE__ ) );
-	wp_enqueue_script( 'disable' );
-	wp_register_script( 'image_like', plugins_url( 'public/js/image_like.js', __FILE__ ) );
-	wp_enqueue_script( 'image_like' );
-}
-
-
 function koala_bing_img_add_template( $posts_templates ) {
 	global $koala_bing_img_templates_new;
 
@@ -93,8 +71,6 @@ function koala_bing_img_view_template( $template ) {
 	}
 	$file = koala_bing_img_dir . $t_template_name;
 	if ( file_exists( $file ) ) {
-		add_action( 'wp_enqueue_scripts', 'koala_bing_img_add_resources' );
-
 		return $file;
 	}
 
