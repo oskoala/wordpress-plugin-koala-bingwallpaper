@@ -1,6 +1,6 @@
 # 考拉开源必应壁纸
 
-> 考拉开源必应壁纸插件主页：https://www.oskoala.com/biyingbizhi
+> 考拉开源必应壁纸插件主页：https://www.oskoala.com/wordpress-plugin-koala-bingwallpaper
 
 > 插件预览地址：https://www.wuzhixiang.cn/index.php/bing/
 
