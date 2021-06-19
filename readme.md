@@ -1,4 +1,4 @@
-# 考拉开源必应壁纸
+# 考拉开源 WordPress 必应壁纸插件
 
 > 考拉开源必应壁纸插件主页：https://www.oskoala.com/wordpress-plugin-koala-bingwallpaper
 
