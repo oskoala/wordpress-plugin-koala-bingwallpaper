@@ -4,7 +4,7 @@
 
 > 插件预览地址：https://www.wuzhixiang.cn/index.php/bing/
 
-> github地址：https://github.com/oskoala/wp-bing-wallpaper
+> github地址：https://github.com/oskoala/wordpress-plugin-koala-bingwallpaper
 
 ## 安装
 
