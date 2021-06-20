@@ -7,7 +7,7 @@ function koala_bing_img_collection_cron() {
 //	$url = koala_bing_img_collection_url() . mt_rand( 1000, 9999 );
 
 	$info = koala_bing_img_collection_info();
-	if ( ! $imageService->existsByOriginUrl( $url ) ) {
+	if ( ! $imageService->existsByOriginUrl( $url ) && $url != "https://cn.bing.com") {
 		$self_url = $imageService->saveToLocal( $url );
 		$imageService->insert( [
 			"origin_url" => $url,

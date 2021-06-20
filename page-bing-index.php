@@ -15,7 +15,7 @@ $order    = isset( $_GET['order'] ) ? $_GET['order'] : "time";
 
 $start_page = ( $page - 1 ) * $per_page;
 
-$sql = "SELECT * FROM {$table}";
+$sql = "SELECT * FROM {$table} where origin_url != 'https://cn.bing.com'";
 
 if ( $order == "time" ) {
 	$sql .= " order by created_at desc";
@@ -29,6 +29,30 @@ $results     = $wpdb->get_results( $sql );
 $plugins_url = plugins_url( '', __FILE__ );
 include "header.php";
 ?>
+<header>
+    <div class="row m-0">
+        <a href="#" class="logo col-lg-3 col-md-6 col-xs-12">
+            <span>必应壁纸</span>
+        </a>
+        <nav class="col-lg-9 col-md-6 col-xs-12">
+            <ul class="menu d-flex justify-content-end">
+                <li>
+                    <a href="<?php global $PLUGIN_ROUTER;
+					echo $PLUGIN_ROUTER ?>">
+                        <p class="text">首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php global $PLUGIN_ROUTER;
+					echo $PLUGIN_ROUTER . '?order=download' ?>">
+                        <p class="text">下载榜</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
 <div class="koala_bing_img_zw"></div>
 <div class="row koala_bing_img_m_0">
 	<?php

@@ -14,28 +14,3 @@
 </head>
 
 <body oncontextmenu="self.event.returnValue=false">
-
-<header>
-    <div class="row m-0">
-        <a href="#" class="logo col-lg-3 col-md-6 col-xs-12">
-            <span>必应壁纸</span>
-        </a>
-        <nav class="col-lg-9 col-md-6 col-xs-12">
-            <ul class="menu d-flex justify-content-end">
-                <li>
-                    <a href="<?php global $PLUGIN_ROUTER;
-					echo $PLUGIN_ROUTER ?>">
-                        <p class="text">首页</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php global $PLUGIN_ROUTER;
-					echo $PLUGIN_ROUTER . '?order=download' ?>">
-                        <p class="text">下载榜</p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-    </div>
-</header>
