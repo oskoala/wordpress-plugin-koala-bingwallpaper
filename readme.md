@@ -8,33 +8,39 @@
 
 ## 安装
 
-第一步：github项目主页下载到插件压缩包。
+### 第一步：
+github项目主页下载到插件压缩包。
 
-第二步：登录 WordPress 后台 >> 插件 >> 安装插件 >> 上传插件 >> 选择第一步下载的压缩包 >> 现在安装。
+### 第二步：
+登录 WordPress 后台 >> 插件 >> 安装插件 >> 上传插件 >> 选择第一步下载的压缩包 >> 现在安装。
 
 ## 配置
 
-第一步、因项目需要定时采集图片信息所以需要配置定时任务
+### 第一步：
+因项目需要定时采集图片信息所以需要配置定时任务
 
 Linux系统
 
+一、进入crontab 编辑页面
 ```shell
-一、
-crontab -e # 进入crontab 编辑页面
-二、 在最下方添加一行
-* * * * * wget --output-document=/dev/null https://www.wuzhixiang.cn/wp-cron.php   #域名换成自己的
+crontab -e
+```
+二、 在最下方添加一行 注意域名要换成自己的
+```
+* * * * * wget --output-document=/dev/null https://www.wuzhixiang.cn/wp-cron.php
 ```
 
 Windows系统
 
+一、创建cron.bat文件填入如下信息  注意域名要换成自己的
 ```shell
-一、创建cron.bat文件填入如下信息：
-powershell Invoke-WebRequest https://www.wuzhixiang.cn/wp-cron.php # 域名换成自己的
+powershell Invoke-WebRequest https://www.wuzhixiang.cn/wp-cron.php
+```
 二、配置计划任务 
 具体请参考：https://blog.csdn.net/xinpo66/article/details/81238982
-```
 
-第二步、添加必应壁纸页面
+### 第二步：
+添加必应壁纸页面
 
 首先确保插件已正常启动。
 
