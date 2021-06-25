@@ -1,6 +1,6 @@
-# 考拉开源 WordPress 必应壁纸插件
+# 考拉开源 WordPress 必应图片插件
 
-> 考拉开源必应壁纸插件主页：https://www.oskoala.com/wordpress-plugin-koala-bingwallpaper
+> 考拉开源必应图片插件主页：https://www.oskoala.com/wordpress-plugin-koala-bingwallpaper
 
 > 插件预览地址：https://www.wuzhixiang.cn/index.php/bing/
 
@@ -40,13 +40,13 @@ powershell Invoke-WebRequest https://www.wuzhixiang.cn/wp-cron.php
 具体请参考：https://blog.csdn.net/xinpo66/article/details/81238982
 
 ### 第二步：
-添加必应壁纸页面
+添加必应图片页面
 
 首先确保插件已正常启动。
 
-WordPress 后台首页>>页面>>新建页面>>填写页面标题，选择页面模板【必应壁纸】>>点击发布按钮。
+WordPress 后台首页>>页面>>新建页面>>填写页面标题，选择页面模板【必应图片】>>点击发布按钮。
 
-注意：页面创建以后能看到页面的访问链接，链接可以自定义，该链接即为必应壁纸访问链接。
+注意：页面创建以后能看到页面的访问链接，链接可以自定义，该链接即为必应图片访问链接。
 
 ## 插件信息
 

@@ -27,12 +27,13 @@ $sql .= " LIMIT $start_page,$per_page";
 
 $results     = $wpdb->get_results( $sql );
 $plugins_url = plugins_url( '', __FILE__ );
+$title = get_the_title();
 include "header.php";
 ?>
 <header>
     <div class="row m-0">
         <a href="#" class="logo col-lg-3 col-md-6 col-xs-12">
-            <span>必应壁纸</span>
+            <span><?php echo $title?></span>
         </a>
         <nav class="col-lg-9 col-md-6 col-xs-12">
             <ul class="menu d-flex justify-content-end">

@@ -3,9 +3,9 @@
 const PLUGIN_URL = "https://www.oskoala.com/wordpress-plugin-koala-bingwallpaper";
 
 /**
- * Plugin Name: 必应壁纸
+ * Plugin Name: 必应图片
  * Plugin URI: https://www.oskoala.com/wordpress-plugin-koala-bingwallpaper
- * Description: WordPress 必应壁纸 插件
+ * Description: WordPress 必应图片 插件
  * Version: 1.0.0
  * Author: 考拉开源
  * Author URI: https://www.oskoala.com/
@@ -46,7 +46,7 @@ add_action( 'koala_bing_img_daily_function_hook', "koala_bing_img_collection_cro
 
 
 $koala_bing_img_templates_new = [
-	"page-bing.php" => "必应壁纸",
+	"page-bing.php" => "必应图片",
 ];
 
 
