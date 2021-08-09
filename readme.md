@@ -2,7 +2,7 @@
 
 > 考拉开源必应图片插件主页：https://www.oskoala.com/wordpress-plugin-koala-bingwallpaper
 
-> 插件预览地址：https://www.wuzhixiang.cn/index.php/bing/
+> 插件预览地址：https://mengya.io/
 
 > github地址：https://github.com/oskoala/wordpress-plugin-koala-bingwallpaper
 
