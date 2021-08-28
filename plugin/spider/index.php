@@ -5,7 +5,7 @@ use QL\QueryList;
 
 
 function koala_bing_img_collection_url() {
-	$imgs     = QueryList::Query( 'https://cn.bing.com/', array( "url" => array( '#bgLink', 'href' ) ) );
+	$imgs     = QueryList::Query( 'https://cn.bing.com/', array( "url" => array( '#preloadBg', 'href' ) ) );
 	$img_urls = $imgs->getData( function ( $x ) {
 		return $x['url'];
 	} );
@@ -26,6 +26,6 @@ function koala_bing_img_collection_info() {
 }
 
 
-//print_r( collection_info());
-//print_r( collection_url());
+//print_r( koala_bing_img_collection_info());
+//print_r( koala_bing_img_collection_url());
 
