@@ -17,7 +17,7 @@ function koala_bing_img_collection_url() {
 
 function koala_bing_img_collection_info() {
 
-	$infos       = QueryList::Query( "https://cn.bing.com/", array( "info" => array( '#sh_cp', 'title' ) ) );
+	$infos       = QueryList::Query( "https://cn.bing.com/", array( "info" => array( '#vs_cont > div.mc_caro > div > div.musCardCont > a', 'text' ) ) );
 	$info_titles = $infos->getData( function ( $x ) {
 		return $x['info'];
 	} );
