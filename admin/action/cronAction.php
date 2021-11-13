@@ -1,19 +1,24 @@
 <?php
 
-function koala_bing_img_collection_cron() {
-	$imageService = new ImageServiceImpl();
+function koala_bing_img_collection_cron()
+{
+    $imageService = new ImageServiceImpl();
 
-	$url          = koala_bing_img_collection_url();
-//	$url = koala_bing_img_collection_url() . mt_rand( 1000, 9999 );
+    $res = file_get_contents("https://cn.bing.com/hp/api/model");
 
-	$info = koala_bing_img_collection_info();
-	if ( ! $imageService->existsByOriginUrl( $url ) && $url != "https://cn.bing.com") {
-		$self_url = $imageService->saveToLocal( $url );
-		$imageService->insert( [
-			"origin_url" => $url,
-			"self_url"   => $self_url,
-			"info"       => $info,
-			"created_at" => date( "Y-m-d H:i:s", time() ),
-		] );
-	}
+    $images = json_decode($res)->MediaContents;
+    for ($i = 0; $i < count($images); $i++) {
+        $url  = koala_bing_img_collection_url($images[$i]);
+        $info = koala_bing_img_collection_info($images[$i]);
+        //	$url = koala_bing_img_collection_url() . mt_rand( 1000, 9999 );
+        if (!$imageService->existsByOriginUrl($url) && $url != "https://cn.bing.com") {
+            $self_url = $imageService->saveToLocal($url);
+            $imageService->insert([
+                "origin_url" => $url,
+                "self_url"   => $self_url,
+                "info"       => $info,
+                "created_at" => date("Y-m-d H:i:s", time()),
+            ]);
+        }
+    }
 }
