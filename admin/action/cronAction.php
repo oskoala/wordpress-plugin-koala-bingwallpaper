@@ -7,10 +7,10 @@ function koala_bing_img_collection_cron()
     $res = file_get_contents("https://cn.bing.com/hp/api/model");
 
     $images = json_decode($res)->MediaContents;
-    for ($i = 0; $i < count($images); $i++) {
+    for ($i = count($images) - 1; $i >= 0; $i--) {
         $url  = koala_bing_img_collection_url($images[$i]);
         $info = koala_bing_img_collection_info($images[$i]);
-        //	$url = koala_bing_img_collection_url() . mt_rand( 1000, 9999 );
+        $url  = $url . mt_rand(1000, 9999);
         if (!$imageService->existsByOriginUrl($url) && $url != "https://cn.bing.com") {
             $self_url = $imageService->saveToLocal($url);
             $imageService->insert([
