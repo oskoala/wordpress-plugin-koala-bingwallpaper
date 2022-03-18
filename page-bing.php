@@ -6,18 +6,22 @@ description: template for Git theme
 <?php
 session_start();
 
-$route = isset( $_GET['route'] ) ? $_GET['route'] : "index";
+$route = isset($_GET['route']) ? $_GET['route'] : "index";
 
 
-$PLUGIN_ROUTER = $_SERVER['DOCUMENT_URI'];
+$PLUGIN_ROUTER = $_SERVER['REQUEST_URI'];
 
-switch ( $route ) {
-	case "index":
-		include "page-bing-index.php";
-		break;
-	case "detail":
-		include "page-bing-detail.php";
-		break;
-	default:
-		include "page-bing-index.php";
+if (count(explode("?", $PLUGIN_ROUTER))) {
+    $PLUGIN_ROUTER = explode("?", $PLUGIN_ROUTER)[0];
+}
+
+switch ($route) {
+    case "index":
+        include "page-bing-index.php";
+        break;
+    case "detail":
+        include "page-bing-detail.php";
+        break;
+    default:
+        include "page-bing-index.php";
 }
