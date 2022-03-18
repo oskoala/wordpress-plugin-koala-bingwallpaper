@@ -4,7 +4,11 @@
 function koala_bing_img_collection_url($image)
 {
     $img_url = $image->ImageContent->Image->Url;
-    return "https://cn.bing.com" . $img_url;
+    if (str_starts_with($img_url, "http")) {
+        return $img_url;
+    } else {
+        return "https://cn.bing.com" . $img_url;
+    }
 }
 
 

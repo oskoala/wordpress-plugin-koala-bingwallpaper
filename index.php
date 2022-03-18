@@ -44,7 +44,6 @@ if ( ! wp_next_scheduled( 'koala_bing_img_daily_function_hook' ) ) {
 
 add_action( 'koala_bing_img_daily_function_hook', "koala_bing_img_collection_cron" );
 
-
 $koala_bing_img_templates_new = [
 	"page-bing.php" => "必应图片",
 ];
