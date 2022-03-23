@@ -11,7 +11,7 @@ const PLUGIN_URL = "https://www.oskoala.com/wordpress-plugin-koala-bingwallpaper
  * Author URI: https://www.oskoala.com/
  */
 
-
+error_reporting(0);
 /**
  * 函数命名规则
  * 函数名称： koala_bing_img_{function_name}
